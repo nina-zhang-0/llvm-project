@@ -102,6 +102,7 @@ add_public_tablegen_target(MLIRROCDLOpsShardGen)
 add_mlir_dialect_library(MLIRROCDLDialect
   IR/ROCDLDialect.cpp
   ${ROCDL_SHARDED_SRCS}
+  IR/ROCDLTargetInfo.cpp
 
   ADDITIONAL_HEADER_DIRS
   ${MLIR_MAIN_INCLUDE_DIR}/mlir/Dialect/LLVMIR
@@ -116,6 +117,7 @@ add_mlir_dialect_library(MLIRROCDLDialect
   LINK_COMPONENTS
   AsmParser
   Core
+  TargetParser
 
   LINK_LIBS PUBLIC
   MLIRIR
